@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <title>Product Landing Page</title>
+  </head>
+  <!--
+   _____/ /_____ ___  __   _______  __/ /____     / /_  ____ _/ /_  __  __
+  / ___/ __/ __ `/ / / /  / ___/ / / / __/ _ \   / __ \/ __ `/ __ \/ / / /
+ (__  ) /_/ /_/ / /_/ /  / /__/ /_/ / /_/  __/  / /_/ / /_/ / /_/ / /_/ / 
+/____/\__/\__,_/\__, /   \___/\__,_/\__/\___/  /_.___/\__,_/_.___/\__, /  
+               /____/                                            /____
+-->
+  <body>
+    <!--TOP HEADER-->
+    <header class="navbar navbar-expand-lg navbar-light" id="header">
+      <!--BRAND: H20 logo-->
+      <a id="header-img" class="navbar-brand" href="#">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="75.296"
+          height="53.437"
+          viewBox="0 0 75.296 53.437"
+        >
+          <path
+            d="M2.19-21H6.4v10.52a12.787,12.787,0,0,1,7.628,0,11.519,11.519,0,0,0,7.3,0V-21h4.208V14.068H21.327V-6.572a23.865,23.865,0,0,1-7.3-.5,14.779,14.779,0,0,0-7.628.5v20.64H2.19ZM51.435,28.529v3.908H27.689V26.425a10.106,10.106,0,0,1,.8-4.183,8.74,8.74,0,0,1,2.279-3.056,12.723,12.723,0,0,1,3.582-2.129A30.9,30.9,0,0,1,39.111,15.6q4.459-1,6.437-2.856A6,6,0,0,0,47.528,8.19v-.3a8.064,8.064,0,0,0-.451-2.655A6.687,6.687,0,0,0,43.244,1.2,9.024,9.024,0,0,0,39.713.575,7.658,7.658,0,0,0,33.726,2.93,8.981,8.981,0,0,0,31.6,9.192v2.2H27.389v-2.5a13.381,13.381,0,0,1,.8-4.609A11.647,11.647,0,0,1,30.545.375,11.157,11.157,0,0,1,34.4-2.331a13.212,13.212,0,0,1,5.31-1,13.912,13.912,0,0,1,5.31.927A11.118,11.118,0,0,1,48.78.049a9.833,9.833,0,0,1,2.229,3.457,11.075,11.075,0,0,1,.726,3.933v.9a9.961,9.961,0,0,1-2.5,6.838q-2.5,2.83-8.016,4.033a18.251,18.251,0,0,0-7.064,2.78A5.957,5.957,0,0,0,31.9,27.026v1.5Zm1.4-35.9c-.024-7.254,24.155-6.891,24.6-.346-.044-.2.048.069.048.346V.441q0,7.014-3.256,10.671t-9.068,3.657q-5.811,0-9.068-3.657T52.838.441ZM65.162,10.962a7,7,0,0,0,6.087-2.83Q73.278,5.3,73.278.141V-7.073s-2.493,2.549-8.116,2.678a14.249,14.249,0,0,1-4.871-.729,7.6,7.6,0,0,1-3.244-1.949V.141q0,5.16,2.029,7.99A7,7,0,0,0,65.162,10.962Z"
+            transform="translate(-2.19 21)"
+            fill="#1610af"
+          />
+        </svg>
+      </a>
+      <!-- Toggler/collapsibe Button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarcollapse"
+        aria-controls="#navbarcollapse"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!--Navigation links-->
+      <nav class="collapse navbar-collapse" id="navbarcollapse">
+        <ul class="d-flex navbar-nav justify-content-around w-100" id="nav-bar">
+          <li class="nav-item"><a class="nav-link" href="#">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Learn More</a></li>
+        </ul>
+        <!--Search Button-->
+        <form role="search" action="/search" class="form-inline search">
+          <svg
+            class="search-button"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#999191"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-search"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            class="search-input"
+            type="search"
+            id="site-search"
+            name="q"
+            placeholder="Search"
+            aria-label="Search through site content"
+          />
+        </form>
+      </nav>
+    </header>
+    <!--PRODUCT INFORMATION-->
+    <main class="container-fluid">
+      <div class="row">
+        <!--Right Product Information -->
+        <div class="col-md-6 order-md-12 product-info-section">
+          <div class="product-info">
+            <!--Title-->
+            <div class="title">
+              <h1 class="product-title">Water</h1>
+              <h3 class="product-description">
+                BY <span class="product-company">MOTHER EARTH</span>
+              </h3>
+            </div>
+            <!--Price info-->
+            <div>
+              <p class="price"><sup>$</sup>0</p>
+            </div>
+          </div>
+          <div>
+            <p>
+              Protects heart, heahty skin, BIG TASTE, free if from creek or
+              puddle, moistens teeth, bone glow, drowns any spiders might have
+              in mouth.
+            </p>
+          </div>
+          <div class="row submit-qty">
+            <div class="col-2 quantity">
+              <label id="quantity-label" for="quantity">Qty</label>
+              <input
+                id="quantity"
+                value="quantity"
+                placeholder="1"
+                type="number"
+                min="1"
+              />
+            </div>
+            <div class="col-9">
+              <button id="cart-button" type="button">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--Left Image Carousel -->
+        <div
+          id="video"
+          class="carousel slide col-md-6 order-md-1"
+          data-ride="carousel"
+        >
+          <!--Carousel Indicators-->
+          <ol class="carousel-indicators">
+            <li data-target="#video" data-slide-to="0" class="active"></li>
+            <li data-target="#video" data-slide-to="1"></li>
+            <li data-target="#video" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="d-block w-100"
+                src="./img/water_main.png"
+                alt="First slide"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="./img/water.png"
+                alt="Second slide"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="./img/water2.png"
+                alt="Third slide"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-100"
+                src="./img/water3.png"
+                alt="Fourth slide"
+              />
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#video"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#video"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </main>
+    <!--REVIEWS-->
+    <section class="container-fluid">
+      <h2 class="section-title">Reviews</h2>
+      <div class="row">
+        <!--Review 1-->
+        <article class="col-lg row review">
+          <div class="col-4 review-img">
+            <img class="meme-img" src="./img/meme1.jpg" alt="Our boy" />
+          </div>
+          <div class="col-8">
+            <h3>No more mommy!</h3>
+            <p>
+              Mommy make me drink the it. Chocolate Cheeto please. Stop it
+              mommy.
+            </p>
+            <p class="name">Agua Fresca</p>
+            <!--Star Reviews-->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="25"
+              viewBox="0 0 32 30.53"
+            >
+              <path
+                id="Icon_feather-star"
+                data-name="Icon feather-star"
+                d="M18,3l4.635,9.39L33,13.9l-7.5,7.3,1.77,10.32L18,26.655,8.73,31.53,10.5,21.21,3,13.9,13.365,12.39Z"
+                transform="translate(-2 -2)"
+                fill="#ffd800"
+                stroke="#000"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+        </article>
+        <!--Review 2-->
+        <article class="col-lg row review">
+          <div class="col-4 review-img">
+            <img class="meme-img" src="./img/meme2.jpg" alt="Water boy" />
+          </div>
+          <div class="col-8">
+            <h3>Best thing to put in the mouth</h3>
+            <p>
+              Water saved my life! I could not do the life without the quench.
+            </p>
+            <p class="name">Chugwater Ikea</p>
+            <!--Star Reviews-->
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="25"
+                viewBox="0 0 32 30.53"
+              >
+                <path
+                  id="Icon_feather-star"
+                  data-name="Icon feather-star"
+                  d="M18,3l4.635,9.39L33,13.9l-7.5,7.3,1.77,10.32L18,26.655,8.73,31.53,10.5,21.21,3,13.9,13.365,12.39Z"
+                  transform="translate(-2 -2)"
+                  fill="#ffd800"
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="25"
+                viewBox="0 0 32 30.53"
+              >
+                <path
+                  id="Icon_feather-star"
+                  data-name="Icon feather-star"
+                  d="M18,3l4.635,9.39L33,13.9l-7.5,7.3,1.77,10.32L18,26.655,8.73,31.53,10.5,21.21,3,13.9,13.365,12.39Z"
+                  transform="translate(-2 -2)"
+                  fill="#ffd800"
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="25"
+                viewBox="0 0 32 30.53"
+              >
+                <path
+                  id="Icon_feather-star"
+                  data-name="Icon feather-star"
+                  d="M18,3l4.635,9.39L33,13.9l-7.5,7.3,1.77,10.32L18,26.655,8.73,31.53,10.5,21.21,3,13.9,13.365,12.39Z"
+                  transform="translate(-2 -2)"
+                  fill="#ffd800"
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="25"
+                viewBox="0 0 32 30.53"
+              >
+                <path
+                  id="Icon_feather-star"
+                  data-name="Icon feather-star"
+                  d="M18,3l4.635,9.39L33,13.9l-7.5,7.3,1.77,10.32L18,26.655,8.73,31.53,10.5,21.21,3,13.9,13.365,12.39Z"
+                  transform="translate(-2 -2)"
+                  fill="#ffd800"
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="25"
+                viewBox="0 0 32 30.53"
+              >
+                <path
+                  id="Icon_feather-star"
+                  data-name="Icon feather-star"
+                  d="M18,3l4.635,9.39L33,13.9l-7.5,7.3,1.77,10.32L18,26.655,8.73,31.53,10.5,21.21,3,13.9,13.365,12.39Z"
+                  transform="translate(-2 -2)"
+                  fill="#ffd800"
+                  stroke="#000"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!--ABOUT SECTION-->
+    <section class="container-fluid">
+      <div class="row">
+        <article class="col-lg">
+          <h2 class="section-title">About</h2>
+          <p class="about">
+            Water was first invented in the 1970s during the Vietnam war of the
+            late 80s. After Poland invaded Russia for their gold, soldiers were
+            in dire need of a substitute to their thirst quench.
+            <br />
+            <br />
+            Water was born. And here it is. Buy from us it.
+          </p>
+          <p></p>
+        </article>
+        <div class="col-lg">
+          <img id="freelancer" src="./freelancer.svg" alt="" srcset="" />
+        </div>
+      </div>
+    </section>
+    <!--LEARN MORE-->
+    <section class="container">
+      <h2 class="section-title row justify-content-center">
+        Sign up to learn more!
+      </h2>
+      <form
+        class="row justify-content-center"
+        action="https://www.freecodecamp.com/email-submit"
+        method="POST"
+        id="form"
+      >
+        <ul class="form-elements">
+          <li>
+            <label class="input-heading" for="name">Full Name</label>
+          </li>
+          <li>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Aqua Faba"
+              required
+            />
+          </li>
+          <li>
+            <label class="input-heading" for="mail">Email</label>
+          </li>
+          <li>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="aqua42@aol.com"
+              required
+            />
+          </li>
+          <li class="center">
+            <h3>Are you thirsty?</h3>
+            <div class="yee-or-nahh">
+              <span class="yee">
+                <label for="yee">Yee</label>
+                <input
+                  type="radio"
+                  id="yee"
+                  name="thirsty"
+                  value="yee"
+                  checked
+                />
+              </span>
+              <span class="nahh">
+                <label for="nahh">Nahh</label>
+                <input type="radio" id="nahh" name="thirsty" value="nahh" />
+              </span>
+            </div>
+          </li>
+          <li class="button center">
+            <button class="submit-button" type="submit">Submit</button>
+          </li>
+        </ul>
+      </form>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(".carousel").carousel({
+        interval: false,
+      });
+    </script>
+  </body>
+</html>

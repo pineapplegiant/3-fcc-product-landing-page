@@ -1,0 +1,326 @@
+/*CSS for the cool kids*/
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans&display=swap");
+html {
+  box-sizing: border-box;
+  margin: 0;
+  height: 100%;
+  font-weight: normal;
+  font-family: "Space Mono", monospace !important;
+  background: white;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  font-family: var(--font);
+}
+
+/*CSS Variables*/
+:root {
+  --baby-blue: #0089ff12;
+  --blue: #1610af;
+  --hover: #6e69e7;
+  --gray: #999191;
+  --light-gray: rgba(153, 145, 145, 0.1);
+  --green: #8edea9;
+  --light-green: rgba(142, 222, 169, 0.75);
+  --black: #141313;
+  --font: "Space Mono", monospace !important;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--gray);
+  font-size: 1.25rem;
+  opacity: 1; /* Firefox */
+}
+
+h2,
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+/* 
+* 
+* GLOBAL STYLES
+*
+*/
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--hover);
+  transition: 0.1s ease-in-out;
+}
+
+body {
+  background: var(--baby-blue) 0% 0% no-repeat padding-box;
+  border: 0.75em solid var(--blue);
+  padding: 3em;
+  margin: 0;
+}
+
+/* 
+* 
+* HEADER/NAV
+*
+ */
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--black);
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.navbar-light:hover .navbar-nav:hover .nav-link:hover {
+  color: var(--hover);
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("./menu.svg");
+}
+
+.navbar-light .navbar-toggler {
+  border: none !important;
+}
+
+.price-button {
+  display: flex;
+}
+
+.quantity {
+  background: white;
+  border-radius: 16px;
+  text-align: center;
+  border: none;
+  max-width: 90px;
+}
+
+#quantity {
+  width: 2.75rem;
+  border: none;
+  text-align: center;
+}
+
+#quantity-label {
+  color: var(--gray);
+}
+
+#quantity::placeholder {
+  color: var(--blue);
+}
+
+#quantity {
+  color: var(--blue);
+  width: 100%;
+}
+
+/*Get the search bar btn lookin cute*/
+.search {
+  position: relative;
+}
+
+.search-input {
+  padding: 14px 48px;
+  border-radius: 20px;
+  border: none;
+  background: white;
+}
+
+.search-button {
+  bottom: 15px;
+  left: 18px;
+  color: var(--gray);
+  z-index: 1;
+  position: absolute;
+  border: none;
+  background: none;
+}
+
+/* 
+ * 
+ * MAIN
+ *
+ */
+
+/*LEFT product info*/
+.carousel-inner {
+  border-radius: 1em;
+}
+
+/*RIGHT product info*/
+
+.product-info {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2em;
+}
+
+.product-info-section {
+  padding: 1em 2.5em;
+}
+
+#cart-button {
+  border: none;
+  background: var(--green);
+  color: white;
+  cursor: pointer;
+  padding: 0.25em 2em;
+  font-size: 1.4rem;
+  border-radius: 30px;
+  height: 100%;
+}
+
+#cart-button:hover {
+  background: var(--light-green);
+}
+
+.product-title {
+  font-size: 4.15rem;
+  margin: 0 auto;
+  color: var(--blue);
+  font-weight: bold;
+  text-align: start;
+}
+
+.price {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  color: var(--blue);
+  background: white;
+  border-radius: 18px;
+  padding: 10px;
+}
+
+.submit-qty {
+  padding-top: 1em;
+}
+
+/* 
+ * 
+ * SECTIONS
+ *
+ */
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--blue);
+  font-weight: bold;
+  margin-top: 4em;
+}
+
+/*Review section*/
+.review-img {
+  overflow: auto;
+  max-width: 100%;
+  padding: 10px;
+}
+
+.meme-img {
+  width: 60%;
+}
+
+.review {
+  padding: 25px;
+  margin: 25px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.name {
+  float: right;
+  font-weight: italic;
+}
+
+/*About section*/
+
+.about {
+  margin-top: 1em;
+  background: white;
+  border-radius: 30px;
+  padding: 2em;
+}
+
+#freelancer {
+  margin-top: 4em;
+}
+
+/*Form Section*/
+
+.form-elements {
+  background: white;
+  width: 53%;
+  padding: 2em;
+  margin: 2em;
+  border-radius: 16px;
+}
+
+#email,
+#name {
+  background: var(--light-gray);
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+#email::placeholder,
+#name::placeholder {
+  color: var(--gray);
+}
+
+.input-heading {
+  font-weight: bold;
+}
+
+.yee-or-nahh {
+  margin-top: 2em;
+}
+
+.yee {
+  margin-right: 2em;
+}
+
+#yee {
+  cursor: pointer;
+}
+
+#nahh {
+  cursor: pointer;
+}
+
+.submit-button {
+  border: none;
+  background: var(--green);
+  color: white;
+  cursor: pointer;
+  padding: 0.3em 2.15em;
+  font-size: 1.25em;
+  border-radius: 30px;
+  min-width: 45%;
+}
+
+.submit-button:hover {
+  background: var(--light-green);
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+/*Media Queries*/
+@media only screen and (max-width: 990px) {
+  .form-elements {
+    width: 100%;
+  }
+}
